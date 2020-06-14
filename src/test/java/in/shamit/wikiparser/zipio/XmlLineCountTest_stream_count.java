@@ -11,7 +11,7 @@ public class XmlLineCountTest_stream_count {
     public static void main(String args[]) throws Exception{
         String  archivePath = "K:\\tmp\\enwiki-latest-pages-articles.xml";
         try(InputStream fin = Files.newInputStream(Paths.get(archivePath));
-            //BufferedInputStream in = new BufferedInputStream(fin,1024*1024*1024);
+            //BufferedInputStream in = new BufferedInputStream (fin,1024*1024*1024);
             BufferedInputStream in = new BufferedInputStream(fin);
             BufferedReader reader = new BufferedReader(new InputStreamReader(in,"UTF-8"))){
                 long count=reader.lines().count();
