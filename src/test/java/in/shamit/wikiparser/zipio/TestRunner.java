@@ -6,7 +6,7 @@ import java.util.Date;
 public class TestRunner {
 
     static String formatDuration(long milliseconds){
-        Duration timeLeft = Duration.ofMillis(elapsed);
+        Duration timeLeft = Duration.ofMillis(milliseconds);
         String hhmmss = String.format("%02d:%02d:%02d",
                 timeLeft.toHours(), timeLeft.toMinutesPart(), timeLeft.toSecondsPart());
         return hhmmss;
@@ -29,7 +29,7 @@ public class TestRunner {
             System.out.println("Run \t"+i+"\t"+hhmmss);
         }
         String hhmmss = formatDuration(total_elapsed_time);
-        System.out.println("Average \t"+i+"\t"+hhmmss);
+        System.out.println("Average \t"+" "+"\t"+hhmmss);
     }
 
     public static void main(String args[]){
