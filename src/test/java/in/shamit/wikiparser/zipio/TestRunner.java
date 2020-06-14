@@ -28,7 +28,7 @@ public class TestRunner {
             String hhmmss = formatDuration(elapsed);
             System.out.println("Run \t"+i+"\t"+hhmmss);
         }
-        String hhmmss = formatDuration(total_elapsed_time);
+        String hhmmss = formatDuration(total_elapsed_time/count);
         System.out.println("Average \t"+" "+"\t"+hhmmss);
     }
 
