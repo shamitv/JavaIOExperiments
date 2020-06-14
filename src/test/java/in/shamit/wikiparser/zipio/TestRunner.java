@@ -5,7 +5,16 @@ import java.util.Date;
 
 public class TestRunner {
 
+    static String formatDuration(long milliseconds){
+        Duration timeLeft = Duration.ofMillis(elapsed);
+        String hhmmss = String.format("%02d:%02d:%02d",
+                timeLeft.toHours(), timeLeft.toMinutesPart(), timeLeft.toSecondsPart());
+        return hhmmss;
+    }
+
     static void runTest(int count){
+
+        long total_elapsed_time = 0;
         for(int i=0;i<count;i++){
             long startMils= new Date().getTime();
             try {
@@ -15,11 +24,12 @@ public class TestRunner {
             }
             long endMils= new Date().getTime();
             long elapsed=endMils-startMils;
-            Duration timeLeft = Duration.ofMillis(elapsed);
-            String hhmmss = String.format("%02d:%02d:%02d",
-                    timeLeft.toHours(), timeLeft.toMinutesPart(), timeLeft.toSecondsPart());
+            total_elapsed_time += elapsed;
+            String hhmmss = formatDuration(elapsed);
             System.out.println("Run \t"+i+"\t"+hhmmss);
         }
+        String hhmmss = formatDuration(total_elapsed_time);
+        System.out.println("Average \t"+i+"\t"+hhmmss);
     }
 
     public static void main(String args[]){
