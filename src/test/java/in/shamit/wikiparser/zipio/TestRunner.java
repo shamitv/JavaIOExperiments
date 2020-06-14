@@ -7,9 +7,8 @@ public class TestRunner {
 
     static String formatDuration(long milliseconds){
         Duration timeLeft = Duration.ofMillis(milliseconds);
-        String hhmmss = String.format("%02d:%02d:%02d",
+        return String.format("%02d:%02d:%02d",
                 timeLeft.toHours(), timeLeft.toMinutesPart(), timeLeft.toSecondsPart());
-        return hhmmss;
     }
 
     static void runTest(int count){
@@ -32,7 +31,7 @@ public class TestRunner {
         System.out.println("Average \t"+" "+"\t"+hhmmss);
     }
 
-    public static void main(String args[]){
+    public static void main(String[] args){
         runTest(4);
     }
 }
