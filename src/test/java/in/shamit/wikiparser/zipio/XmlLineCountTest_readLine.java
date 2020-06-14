@@ -12,9 +12,7 @@ public class XmlLineCountTest_readLine {
     public static void main(String[] args) {
         String  archivePath = "K:\\tmp\\enwiki-latest-pages-articles.xml";
         try(InputStream fin = Files.newInputStream(Paths.get(archivePath));
-            //BufferedInputStream in = new BufferedInputStream(fin,1024*1024*1024);
-            BufferedInputStream in = new BufferedInputStream(fin);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in, StandardCharsets.UTF_8))){
+            BufferedReader reader = new BufferedReader(new InputStreamReader(fin, StandardCharsets.UTF_8))){
                 long count=0;
                 //long count=reader.lines().count();
                 while(reader.readLine()!=null){
@@ -28,11 +26,11 @@ public class XmlLineCountTest_readLine {
 }
 
 /* Results
- *Run 	0	00:04:36
- * Run 	1	00:04:37
- * Run 	2	00:04:30
- * Run 	3	00:04:30
- * Average 	 	00:18:15
+Run 	0	00:05:56
+Run 	1	00:04:34
+Run 	2	00:04:30
+Run 	3	00:04:29
+Average 	 	00:04:52
  *
  *
  */
