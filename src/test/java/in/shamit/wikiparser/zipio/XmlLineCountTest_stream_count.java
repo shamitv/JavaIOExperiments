@@ -23,7 +23,5 @@ public class XmlLineCountTest_stream_count {
 }
 
 // First   run : 5m 57s
-// Second  run : m s
-// Third   run : m s
-// Fourth  run : m s
-// Fifth   run : m s
+// Second  run : 5m 57s
+// Third   run : 6m 2s
