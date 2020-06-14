@@ -25,3 +25,13 @@ public class XmlLineCountTest_readLine {
         }
     }
 }
+
+/** Results
+ *Run 	0	00:04:36
+ * Run 	1	00:04:37
+ * Run 	2	00:04:30
+ * Run 	3	00:04:30
+ * Average 	 	00:18:15
+ *
+ *
+ */
