@@ -7,13 +7,13 @@ import java.io.InputStreamReader;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
+
+
 public class XmlLineCountTest_stream_count {
     public static void main(String args[]) throws Exception{
         String  archivePath = "K:\\tmp\\enwiki-latest-pages-articles.xml";
         try(InputStream fin = Files.newInputStream(Paths.get(archivePath));
-            //BufferedInputStream in = new BufferedInputStream (fin,1024*1024*1024);
-            BufferedInputStream in = new BufferedInputStream(fin);
-            BufferedReader reader = new BufferedReader(new InputStreamReader(in,"UTF-8"))){
+            BufferedReader reader = new BufferedReader(new InputStreamReader(fin,"UTF-8"),1024*1024*100)){
                 long count=reader.lines().count();
                 System.out.println(count);
         }catch (Exception e){
@@ -21,3 +21,9 @@ public class XmlLineCountTest_stream_count {
         }
     }
 }
+
+// First   run : 5m 57s
+// Second  run : m s
+// Third   run : m s
+// Fourth  run : m s
+// Fifth   run : m s
