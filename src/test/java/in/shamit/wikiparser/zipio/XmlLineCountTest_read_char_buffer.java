@@ -17,11 +17,12 @@ public class XmlLineCountTest_read_char_buffer {
             char[] buf=new char[buf_size];
             int read;
             while((read=reader.read(buf))!=-1){
+                /*
                 for(int i=0;i<read;i++){
                     if(buf[i]=='\r'||buf[i]=='\n'){
                         count++;
                     }
-                }
+                }*/
             }
             System.out.println(count);
         }catch (Exception e){
@@ -31,11 +32,15 @@ public class XmlLineCountTest_read_char_buffer {
 }
 
 /* Results
-Run 	0	00:05:59
-Run 	1	00:06:04
-Run 	2	00:05:55
-Run 	3	00:05:55
-Average 	 	00:05:58
+0
+Run 	0	00:04:15
+0
+Run 	1	00:03:21
+0
+Run 	2	00:03:24
+0
+Run 	3	00:03:25
+Average 	 	00:03:36
  *
  *
  */
