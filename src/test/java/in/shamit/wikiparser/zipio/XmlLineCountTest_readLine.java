@@ -1,6 +1,5 @@
 package in.shamit.wikiparser.zipio;
 
-import java.io.BufferedInputStream;
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
@@ -14,7 +13,6 @@ public class XmlLineCountTest_readLine {
         try(InputStream fin = Files.newInputStream(Paths.get(archivePath));
             BufferedReader reader = new BufferedReader(new InputStreamReader(fin, StandardCharsets.UTF_8))){
                 long count=0;
-                //long count=reader.lines().count();
                 while(reader.readLine()!=null){
                     count++;
                 }
