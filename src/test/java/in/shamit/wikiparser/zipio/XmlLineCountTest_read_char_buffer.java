@@ -31,7 +31,11 @@ public class XmlLineCountTest_read_char_buffer {
 }
 
 /* Results
-
+Run 	0	00:05:59
+Run 	1	00:06:04
+Run 	2	00:05:55
+Run 	3	00:05:55
+Average 	 	00:05:58
  *
  *
  */
