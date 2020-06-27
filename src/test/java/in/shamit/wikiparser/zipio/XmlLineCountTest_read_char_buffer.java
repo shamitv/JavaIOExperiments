@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 
 public class XmlLineCountTest_read_char_buffer {
     public static void main(String[] args) {
-        String  archivePath = "F:\\nlp\\Wikipedia\\wiki_aug_2019\\enwiki-latest-pages-articles-multistream.xml";
+        String  archivePath = args[0];
         int buf_size=1000*1000;
         try(InputStream fin = Files.newInputStream(Paths.get(archivePath));
             BufferedReader reader =

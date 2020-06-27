@@ -10,7 +10,7 @@ import java.nio.file.Paths;
 
 public class XmlLineCountTest_stream_count {
     public static void main(String args[]) throws Exception{
-        String  archivePath = "K:\\tmp\\enwiki-latest-pages-articles.xml";
+        String  archivePath = args[0];
         try(InputStream fin = Files.newInputStream(Paths.get(archivePath));
             BufferedReader reader = new BufferedReader(new InputStreamReader(fin,"UTF-8"),1024*1024*100)){
                 long count=reader.lines().count();

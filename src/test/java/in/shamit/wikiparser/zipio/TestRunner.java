@@ -11,13 +11,15 @@ public class TestRunner {
                 timeLeft.toHours(), timeLeft.toMinutesPart(), timeLeft.toSecondsPart());
     }
 
-    static void runTest(int count){
+    static void runTest(int count, String textFilePath){
 
         long total_elapsed_time = 0;
         for(int i=0;i<count;i++){
             long startMils= new Date().getTime();
             try {
-                XmlLineCountTest_read_char_buffer.main(null);
+                String[] args=new String[1];
+                args[0]=textFilePath;
+                XmlLineCountTest_read_char_buffer.main(args);
             } catch (Exception e) {
                 e.printStackTrace();
             }
@@ -32,6 +34,7 @@ public class TestRunner {
     }
 
     public static void main(String[] args){
-        runTest(4);
+        String textFilePath = args[0];
+        runTest(4,textFilePath);
     }
 }

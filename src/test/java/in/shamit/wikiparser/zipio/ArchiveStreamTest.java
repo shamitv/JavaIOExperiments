@@ -9,7 +9,7 @@ import java.nio.file.Paths;
 
 public class ArchiveStreamTest {
     public static void main(String args[]) throws Exception{
-        String  archivePath = "E:\\nlp\\Wikipedia\\enwiki-20151102-pages-articles.xml.bz2";
+        String  archivePath = args[0];
         try(InputStream fin = Files.newInputStream(Paths.get(archivePath));
             BufferedInputStream in = new BufferedInputStream(fin);
             BZip2CompressorInputStream bzIn = new BZip2CompressorInputStream(in);
