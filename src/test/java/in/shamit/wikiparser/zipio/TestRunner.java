@@ -17,7 +17,7 @@ public class TestRunner {
         for(int i=0;i<count;i++){
             long startMils= new Date().getTime();
             try {
-                XmlLineCountTest_read_byte_buffer.main(null);
+                XmlLineCountTest_read_char_buffer.main(null);
             } catch (Exception e) {
                 e.printStackTrace();
             }
