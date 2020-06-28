@@ -1,9 +1,6 @@
 package in.shamit.wikiparser.zipio;
 
-import java.io.BufferedReader;
 import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 
@@ -11,7 +8,7 @@ public class XmlLineCountTest_read_byte_buffer {
     public static void main(String[] args) {
         String  archivePath = args[0];
         int buf_size=1000*1000*100;
-        try(InputStream fin = Files.newInputStream(Paths.get(archivePath));){
+        try(InputStream fin = Files.newInputStream(Paths.get(archivePath))){
             long count=0;
             int read;
             byte []buf;
